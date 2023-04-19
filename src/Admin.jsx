@@ -8,7 +8,7 @@ const Admin = (props) => {
                 <input type="text" placeholder="Name" value={props.employee.name || ''} onChange={props.handlerChange} name='name' autoFocus/>
                 <input type="text" placeholder="Lastame" value={props.employee.lastname || ''} onChange={props.handlerChange} name='lastname' />
                 <input type="text" placeholder="Postion" value={props.employee.position || ''} onChange={props.handlerChange} name='position' />
-                <input type="submit" value='Save' onClick={props.handlerSubmit} style={{cursor:"pointer"}} disabled />
+                <input type="submit" value='Save' onClick={props.handlerSubmit} style={{cursor:"pointer"}} disabled={props.disabled} />
             </form>
             <table>
                 <tr id='head'>

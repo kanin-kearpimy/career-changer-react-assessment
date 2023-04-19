@@ -29,6 +29,7 @@ const Home = () => {
   const [employees,setEmployees] = useState(mockEmployees);
   const [employee,setEmployee] = useState({});
   const [isUser, setIsUser] = useState('')
+  const [isDisable, setIsDisable] = useState(true)
   // const [isFill,setIsFill] = useState(false)
 
   function handlerChange ({target}){
@@ -40,13 +41,15 @@ const Home = () => {
     e.target.parentNode.children[0].focus()
   }
 
-  // function validateForm(){
-  //   if(Object.keys(employee).length === 3){
+  function validateForm(){
+    if(Object.keys(employee).length === 3){
+      setIsDisable(false)
+    }else{
+      setIsDisable(true)
+    }
+  }
 
-  //   }else{
-
-  //   }
-  // }
+  useEffect(validateForm,[employee])
 
   function handlerSubmit (e){
     e.preventDefault()
@@ -64,12 +67,6 @@ const Home = () => {
   function handlerDelete (){
     setEmployees([])
   }
-  
-  // function handlerClick ({target}) {
-  //   const dupEmployee = employees.filter(e=>e.id==!target.id)
-  //   const deleted = [...dupEmployee]
-  //   setEmployees(deleted)
-  // }
 
   return (
     <Layout>
@@ -87,7 +84,9 @@ const Home = () => {
         handlerChange={handlerChange} 
         handlerSubmit={handlerSubmit} 
         handlerClick={handlerClick} 
-        handlerDelete={handlerDelete}/>}
+        handlerDelete={handlerDelete}
+        disabled = {isDisable}  
+        />}
       </div>
     </Layout>
   )

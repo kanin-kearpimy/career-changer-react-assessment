@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* owner page */
+p{
+    width:50%;
+}
+
+/* user page */
+#head{
+    background-color: lightgrey;
+    font-weight: bold;
+}
+table,tr,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    width: 500px;
+}
+#layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#navbar {
+    width: 100%;
+    background-color: lightgrey;
+}
+ul{
+    padding: 10px 20px;
+}
+h1 {
+    text-align: center;
+    margin: 20px;
+}
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button {
+    margin: 30px 20px;
+    background-color: white;
+    width: 200px;
+    height: 30px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: lightgray;
+    
+}
+#admin-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#form-title {
+    width: 100%;
+}
+input {
+    padding: 5px 10px;
+    margin: 30px 20px;
+}
+input[type="submit"] {
+    background-color: rgb(58, 119, 232);
+    border: none;
+    border-radius: 5px;
+}
+.delete-row {
+    margin: 0;
+    background-color: white;
+    width: auto;
+    cursor: pointer;
+    border: none;
+    color: red;
+    font-weight: bold;
+}
+
+.delete-all {
+    margin: 50px;
+    background-color: white;
+    width: 100px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+    font-weight: bold;
+}
+
+
